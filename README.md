@@ -28,7 +28,7 @@ Modern deep learning evolves rapidly, but many techniques are often used as reci
 
 ### Representation Learning & Bi-Encoders
 
-- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805) - Similar pretrain-finetune paradigm as GPT-1 but on a encoder-only Transformer, pretrained via MLM (enabling bidirectional self-attention) and NSP (later dropped in RoBERTa). Downstream tasks are handled with task-specific heads, typically using [CLS] representation. 
 - [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](https://arxiv.org/abs/1908.10084)
 - [Matryoshka Representation Learning](https://arxiv.org/abs/2205.13147)
 - [Improving Text Embeddings with Large Language Models](https://arxiv.org/abs/2401.00368)
