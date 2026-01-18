@@ -17,14 +17,14 @@ Modern deep learning evolves rapidly, but many techniques are often used as reci
 
 - [Understanding LSTM Networks (RNN + LSTM)](https://www.bioinf.jku.at/publications/older/2604.pdf)
 - [Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation](https://arxiv.org/abs/1406.1078)
-- [Sequence to Sequence Learning with Neural Networks](https://arxiv.org/abs/1409.3215) - Introduced seq to seq, encoder-decoder model using LSTM.
+- [Sequence to Sequence Learning with Neural Networks](https://arxiv.org/abs/1409.3215) - Encoder-decoder model using LSTM for neural machine translation, the encoder processes the input tokens in language A and produces a fixed representation that the decoder uses to generate output tokens in language B.
 - [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/abs/1409.0473) - Introduced attention into NMT on top of an RNN encoder–decoder model, where the hidden states of all input tokens from the encoder are stored in memory and provided to the decoder with a soft search option via attention to look at all tokens instead of relying fully on a fixed-size vector.
 - [Attention is All You Need](https://arxiv.org/abs/1706.03762) - Removed recurrence, relying entirely on attention (self & cross attention) for next-token prediction.
-- [Improving Language Understanding by Generative Pre-Training](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf)
-- [Language Models are Unsupervised Multitask Learners](https://arxiv.org/abs/1909.10618)
-- [GLU Variants Improve Transformer](https://arxiv.org/abs/2002.05202)
-- [On Layer Normalization in the Transformer Architecture](https://arxiv.org/abs/2002.04745)
-- [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929)
+- [Improving Language Understanding by Generative Pre-Training](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf) - GPT-1; used the same pretrained core (a decoder-only Transformer) and fine-tuned separate models for downstream NLP tasks such as classification, entailment, similarity, etc outperforming existing task-specific approaches.
+- [Language Models are Unsupervised Multitask Learners](https://arxiv.org/abs/1909.10618) - GPT-2; proved that a single large model can perform multiple NLP tasks without task specific fine-tuning, purely via prompting.
+- [GLU Variants Improve Transformer](https://arxiv.org/abs/2002.05202) - Introduced SwiGLU activations, empirical analysis.
+- [On Layer Normalization in the Transformer Architecture](https://arxiv.org/abs/2002.04745) - Usually, Post-LN Transformers are trained with a warmup stage for the learning rate (to control gradient explosion due to multiple residual connections). Pre-LN gives more well-behaved gradients during initialization, encouraging the removal of the warmup stage and achieving comparable results. Pre-LN had been used before (e.g., GPT-2), but this work provides a theoretical explanation for why this works.
+- [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929) - Vision Transformer (ViT); Supervised model for image classification, less inductive bias compared to CNNs, outperforms CNNs at scale.
 
 ### Representation Learning & Bi-Encoders
 
