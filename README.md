@@ -28,10 +28,10 @@ Modern deep learning evolves rapidly, but many techniques are often used as reci
 
 ### Representation Learning & Bi-Encoders
 
-- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805) - Similar pretrain-finetune paradigm as GPT-1 but on a encoder-only Transformer, pretrained via MLM (enabling bidirectional self-attention) and NSP (later dropped in RoBERTa). Downstream tasks are handled with task-specific heads, typically using [CLS] representation. 
-- [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](https://arxiv.org/abs/1908.10084)
-- [Matryoshka Representation Learning](https://arxiv.org/abs/2205.13147)
-- [Improving Text Embeddings with Large Language Models](https://arxiv.org/abs/2401.00368)
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805) - Similar pretrain-finetune paradigm as GPT-1 but on a encoder-only Transformer, pretrained via MLM (enabling bidirectional self-attention) and NSP (later dropped in RoBERTa). Downstream tasks are handled with task-specific heads, typically using [CLS] representation.
+- [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](https://arxiv.org/abs/1908.10084) - Sentence representation via MEAN pooling token embeddings, fine-tunes via a classification head on on the concatenated feature vector [u,v,∣u−v∣] with cross entropy loss for NLI tasks (entailment, contradiction, neutral) and further fine-tuned on STS (Semantic Textual Similarity) regression using cosine similarity with MSE loss on human-annotated similarity scores.
+- [Matryoshka Representation Learning](https://arxiv.org/abs/2205.13147) - Truncatable embeddings; trains a model so that a single embedding contains nested, truncated vectors of various sizes (8, 16, 32, 64, ...). It does this by applying separate losses to each prefix dimension during training.
+- [Improving Text Embeddings with Large Language Models](https://arxiv.org/abs/2401.00368) - Using decoder-only models for generating representations.
 - [NV-EMBED: Improved Techniques for Training LLMs as Generalist Embedding Models](https://arxiv.org/abs/2405.17428)
 
 ### Alignment, Instruction Tuning & RLHF
