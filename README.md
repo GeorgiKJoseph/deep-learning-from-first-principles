@@ -36,7 +36,7 @@ Modern deep learning evolves rapidly, but many techniques are often used as reci
 
 ### Alignment, Instruction Tuning & RLHF
 
-- [Deep Reinforcement Learning from Human Preferences](https://arxiv.org/abs/1706.03741)
+- [Deep Reinforcement Learning from Human Preferences](https://arxiv.org/abs/1706.03741) - RL using reward models learned from human feedback rather than a reward function, enables tasks where defining rewards is impossible. Experiments on Atari (video frame input, discrete action spaces, A3C) and robot locomotion (sensor inputs, continuous action spaces, TRPO) matched or surpassed traditional methods with high sample efficiency.
 - [Learning to Summarize from Human Feedback](https://arxiv.org/abs/2009.01325)
 - [Training Language Models to Follow Instructions with Human Feedback](https://arxiv.org/abs/2203.02155)
 
